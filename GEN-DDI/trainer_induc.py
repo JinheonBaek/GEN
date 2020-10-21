@@ -63,8 +63,16 @@ class Trainer(object):
 
     def load_model(self):
 
-        num_entities = 1861
-        num_relations = 113
+        num_entities = None
+        num_relations = None
+
+        if self.args.data == 'Decagon':
+            num_entities = 637
+            num_relations = 200
+
+        elif self.args.data == 'DeepDDI':
+            num_entities = 1861
+            num_relations = 113
 
         if self.args.model == 'InducGEN':
 
