@@ -97,3 +97,17 @@ Our model achieves the following performances for 3-shot relation prediction on 
 | ------    | ----  | ----  | ----  |
 | I-GEN     | .946  | .681  | .807  |
 | T-GEN     | .954  | .708  | .815  |
+
+## Citation
+
+If you found the provided code with our paper useful in your work, we kindly request that you cite our work. </br>
+As the proceedings of NeurIPS 2020 will be available, we will change the BibTex below accordingly.
+
+```BibTex
+@article{baek2020,
+  title={Learning to Extrapolate Knowledge: Transductive Few-shot Out-of-Graph Link Prediction},
+  author={Jinheon Baek and Dong Bok Lee and Sung Ju Hwang},
+  journal={arXiv preprint arXiv:2006.06648},
+  year={2020}
+}
+```
