@@ -2,6 +2,19 @@
 
 Official Code Repository for the paper "Learning to Extrapolate Knowledge: Transductive Few-shot Out-of-Graph Link Prediction" (NeurIPS 2020)
 
+## Abstract
+
+![Concept](https://user-images.githubusercontent.com/26034065/96733515-8046be80-13f4-11eb-8175-fe3e4af30458.png)
+
+
+Many practical graph problems, such as knowledge graph construction and drug-drug interaction prediction, require to handle multi-relational graphs. However, handling real-world multi-relational graphs with Graph Neural Networks (GNNs) is often challenging due to their evolving nature, where new entities (nodes) can emerge over time. Moreover, newly emerged entities often have few links, which makes the learning even more difficult. Motivated by this challenge, we introduce a realistic problem of *few-shot out-of-graph link prediction*, where we not only predict the links between the seen and unseen nodes as in a conventional out-of-knowledge link prediction but also between the unseen nodes, with only few edges per node. We tackle this problem with a novel transductive meta-learning framework which we refer to as *Graph Extrapolation Networks (GEN)*. GEN meta-learns both the node embedding network for inductive inference (seen-to-unseen) and the link prediction network for transductive inference (unseen-to-unseen). For transductive link prediction, we further propose a stochastic embedding layer to model uncertainty in the link prediction between unseen entities. We validate our model on multiple benchmark datasets for knowledge graph completion and drug-drug interaction prediction. The results show that our model significantly outperforms relevant baselines for out-of-graph link prediction tasks.
+
+### Contribution of this work
+
+* We tackle a realistic problem setting of **few-shot out-of-graph link prediction**, aiming to perform link prediction not only between seen and unseen entities but also among unseen entities for multi-relational graphs that exhibit long-tail distributions, where each entity has only few triplets.
+* To tackle this problem, we propose a **novel meta-learning framework**, Graph Extrapolation Network (GEN), which meta-learns the node embeddings for unseen entities, to obtain low error on link prediction for both seen-to-unseen (inductive) and unseen-to-unseen (transductive) cases.
+* We validate GEN for few-shot out-of-graph link prediction tasks on **five benchmark datasets** for **knowledge graph completion** and **drug-drug interaction prediction**, on which it significantly outperforms relevant baselines, even when baseline models are re-trained with the unseen entities.
+
 ## Dependencies
 
 * Python 3.7
@@ -66,19 +79,19 @@ python eval_trans.py --data DeepDDI --gpu -1 --few 3 --pre-train --fine-tune --m
 
 ## Pre-trained Models
 
-You can see the pre-trained models in a *Pretraining* folder on each dataset.
+You can see the pre-trained models in a *Pretraining* folder for each task (GEN-KG or GEN-DDI).
 
 ## Results
 
 We demonstrate our *Graph Extrapolation Networks* on two types of link prediction task: entity prediction for knowledge graph completion and relation prediction for drug-drug interaction prediction.
 
-Our model achieves the following performance for 3-shot entity prediction on FB15k-237 dataset.
+Our model achieves the following performances for 3-shot entity prediction on FB15k-237 dataset.
 | Model     | MRR   | Hits@1    | Hits@3    | Hits@10   |
 | ------    | ----  | ----      | ----      | ---       |
 | I-GEN     | .367  | .281      | .407      | .537      |
 | T-GEN     | .382  | .289      | .430      | .565      |
 
-Our model achieves the following performance for 3-shot relation prediction on DeepDDI dataset.
+Our model achieves the following performances for 3-shot relation prediction on DeepDDI dataset.
 | Model     | ROC   | PR    | Acc   |
 | ------    | ----  | ----  | ----  |
 | I-GEN     | .946  | .681  | .807  |
