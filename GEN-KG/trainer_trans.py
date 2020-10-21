@@ -320,6 +320,7 @@ class Trainer(object):
         ts = time.strftime('%Y-%b-%d-%H:%M:%S', time.gmtime())
 
         exp_name = str()
+        exp_name += "Data={}_".format(args.data)
         exp_name += "Model={}_".format(args.model)
         exp_name += "Bases={}_".format(args.bases)
         exp_name += "DO={}_".format(args.dropout)

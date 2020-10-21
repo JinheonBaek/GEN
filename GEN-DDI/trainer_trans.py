@@ -67,7 +67,7 @@ class Trainer(object):
         num_entities = None
         num_relations = None
 
-        if self.args.data == 'Decagon':
+        if self.args.data == 'BIOSNAP-sub':
             num_entities = 637
             num_relations = 200
 
@@ -244,6 +244,7 @@ class Trainer(object):
         ts = time.strftime('%Y-%b-%d-%H:%M:%S', time.gmtime())
 
         exp_name = str()
+        exp_name += "Data={}_".format(args.data)
         exp_name += "Model={}_".format(args.model)
         exp_name += "Bases={}_".format(args.bases)
         exp_name += "DO={}_".format(args.dropout)
