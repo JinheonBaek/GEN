@@ -101,13 +101,17 @@ Our model achieves the following performances for 3-shot relation prediction on 
 ## Citation
 
 If you found the provided code with our paper useful in your work, we kindly request that you cite our work. </br>
-As the proceedings of NeurIPS 2020 will be available, we will change the BibTex below accordingly.
 
 ```BibTex
-@article{baek2020,
-  title={Learning to Extrapolate Knowledge: Transductive Few-shot Out-of-Graph Link Prediction},
-  author={Jinheon Baek and Dong Bok Lee and Sung Ju Hwang},
-  journal={arXiv preprint arXiv:2006.06648},
-  year={2020}
+@inproceedings{baek2020gen,
+ author = {Baek, Jinheon and Lee, Dong Bok and Hwang, Sung Ju},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {H. Larochelle and M. Ranzato and R. Hadsell and M. F. Balcan and H. Lin},
+ pages = {546--560},
+ publisher = {Curran Associates, Inc.},
+ title = {Learning to Extrapolate Knowledge: Transductive Few-shot Out-of-Graph Link Prediction},
+ url = {https://proceedings.neurips.cc/paper/2020/file/0663a4ddceacb40b095eda264a85f15c-Paper.pdf},
+ volume = {33},
+ year = {2020}
 }
 ```
