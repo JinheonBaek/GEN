@@ -2,6 +2,8 @@
 
 Official Code Repository for the paper "Learning to Extrapolate Knowledge: Transductive Few-shot Out-of-Graph Link Prediction" (NeurIPS 2020) : https://arxiv.org/abs/2006.06648.
 
+In this repository, we implement Graph Extrapolation Network (GEN) with both inductive and transductive schemes, proposed in our paper.
+
 ## Abstract
 
 <p align="center">
